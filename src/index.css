@@ -5,9 +5,140 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: url("https://previews.123rf.com/images/pookgreen/pookgreen1501/pookgreen150100256/35714761-number-keypad-of-a-calculator-on-white-background.jpg") no-repeat center;
+  background-size: cover;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.mainDiv {
+  width: 500px;
+  user-select: none;
+  border-radius: 10px;
+  background-color: #565656;
+  padding: 40px 0px;
+  margin: 50px 400px;
+}
+
+.calc-input {
+  font-family: 'Orbitron', serif ;
+  font-weight: bold;
+  background-color: #CBDCCC;
+  width: 378px;
+  margin-left: 49px;
+  height: 70px;
+  text-align: right;
+  font-size: 20px;
+  border: 2px solid #000000;
+  padding-right: 20px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+}
+
+.calc-main {
+  margin-left: 35px;
+  text-align: center;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(5, 50px);
+  grid-template-areas:
+  "itemX itemX itemDivide itemDivide"
+  "item1 item2 item3 itemPlus"
+  "item4 item5 item6 itemMinus"
+  "item7 item8 item9 itemEqual"
+  "itemC item0 itemDot itemEqual"
+;
+
+}
+
+.calc-main button {
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+.calc-main button:hover {
+  background-color: #cccccc;
+}
+
+.calc-main button:focus {
+  outline: none;
+}
+
+.itemX {
+  background-color: #F87B00;
+  grid-area: itemX;
+  font-size: 20px;
+}
+.itemEqual {
+  background-color: #F87B00;
+  grid-area: itemEqual;
+  font-size: 30px;
+}
+.itemDivide {
+  background-color: #F87B00;
+  grid-area: itemDivide;
+  font-size: 20px;
+}
+.itemC {
+  grid-area: itemC;
+  background-color: #ff311b;
+  font-weight: bold;
+}
+.item1 {
+  grid-area: item1;
+  background-color: #ffffff;
+}
+.item2 {
+  grid-area: item2;
+  background-color: #ffffff;
+}
+.item3 {
+  grid-area: item3;
+  background-color: #ffffff;
+}
+.itemPlus {
+  background-color: #F87B00;
+  grid-area: itemPlus;
+  font-size: 20px;
+}
+.item4 {
+  grid-area: item4;
+  background-color: #ffffff;
+}
+.item5 {
+  grid-area: item5;
+  background-color: #ffffff;
+}
+.item6 {
+  grid-area: item6;
+  background-color: #ffffff;
+}
+.itemMinus {
+  background-color: #F87B00;
+  grid-area: itemMinus;
+  font-size: 20px;
+}
+.item7 {
+  grid-area: item7;
+  background-color: #ffffff;
+}
+.item8 {
+  grid-area: item8;
+  background-color: #ffffff;
+}
+.item9 {
+  grid-area: item9;
+  background-color: #ffffff;
+}
+.item0 {
+  grid-area: item0;
+  background-color: #ffffff;
+}
+.itemDot {
+  grid-area: itemDot;
+  background-color: #ffffff;
+  font-weight: bold;
 }
