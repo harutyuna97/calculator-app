@@ -19,7 +19,7 @@ code {
   user-select: none;
   border-radius: 10px;
   background-color: #565656;
-  padding: 40px 0px;
+  padding: 40px 0;
   margin: 50px 400px;
 }
 
@@ -36,6 +36,11 @@ code {
   padding-right: 20px;
   margin-bottom: 30px;
   border-radius: 10px;
+  cursor: inherit;
+}
+
+.calc-input:focus {
+  outline: none;
 }
 
 .calc-main {
