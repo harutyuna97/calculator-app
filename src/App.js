@@ -22,7 +22,7 @@ class App extends Component{
   };
 
   handleMinus = () => {
-    if (this.state.inputValue && this.state.inputValue.charAt(0) !== "-" && this.state.inputValue.charAt(0) !== "0") {
+    if (this.state.inputValue && this.state.inputValue.charAt(0) !== "-" && this.state.inputValue !== '0') {
       this.setState({
         inputValue: '-' + this.state.inputValue
       })
