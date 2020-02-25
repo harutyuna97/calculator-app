@@ -22,7 +22,7 @@ class App extends Component{
   };
 
   handleMinus = () => {
-    if (this.state.inputValue.charAt(0) !== "-") {
+    if (this.state.inputValue && this.state.inputValue.charAt(0) !== "-" && this.state.inputValue.charAt(0) !== "0") {
       this.setState({
         inputValue: '-' + this.state.inputValue
       })
@@ -67,9 +67,15 @@ class App extends Component{
               break;
         case "divide":
           newValue = +this.state.inputNewValue / +this.state.inputValue;
-          this.setState({
-            inputValue: newValue.toString()
-          });
+          if (newValue.toString() !== 'Infinity') {
+            this.setState({
+              inputValue: newValue.toString()
+            })
+            } else {
+            this.setState({
+              inputValue: ''
+            })
+          }
               break;
         case "minus":
           newValue = +this.state.inputNewValue - +this.state.inputValue;
