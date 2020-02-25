@@ -7,16 +7,28 @@ class App extends Component{
     inputOperator: '',
   };
 
-  handleClick = (e) => {
+  handleClick = e => {
     this.setState({
       inputValue: this.state.inputValue + e.target.id
     })
   };
 
-  handleClickZero = (e) => {
+  handleClickZero = e => {
     if (this.state.inputValue !== '') {
       this.setState({
         inputValue: this.state.inputValue + e.target.id
+      })
+    }
+  };
+
+  handleMinus = () => {
+    if (this.state.inputValue.charAt(0) !== "-") {
+      this.setState({
+        inputValue: '-' + this.state.inputValue
+      })
+    } else {
+      this.setState({
+        inputValue: this.state.inputValue.substring(1)
       })
     }
   };
@@ -37,26 +49,32 @@ class App extends Component{
     });
   };
 
+
   handleEqual = () => {
+    let newValue = '';
       switch (this.state.inputOperator) {
         case "plus":
+          newValue = +this.state.inputNewValue + +this.state.inputValue;
           this.setState({
-            inputValue: +this.state.inputNewValue + +this.state.inputValue
+            inputValue: newValue.toString()
           });
               break;
         case "times":
+          newValue = +this.state.inputNewValue * +this.state.inputValue;
           this.setState({
-            inputValue: +this.state.inputNewValue * +this.state.inputValue
+            inputValue: newValue.toString()
           });
               break;
         case "divide":
+          newValue = +this.state.inputNewValue / +this.state.inputValue;
           this.setState({
-            inputValue: +this.state.inputNewValue / +this.state.inputValue
+            inputValue: newValue.toString()
           });
               break;
         case "minus":
+          newValue = +this.state.inputNewValue - +this.state.inputValue;
           this.setState({
-            inputValue: +this.state.inputNewValue - +this.state.inputValue
+            inputValue: newValue.toString()
           });
               break;
         default:
@@ -88,6 +106,7 @@ class App extends Component{
             <button onClick = {this.handleClick} className = 'item9' id = '9'> 9 </button>
             <button onClick = {this.handleClickZero} className = 'item0' id = '0'> 0 </button>
             <button onClick = {this.handleClick} className = 'itemDot' id = '.'> . </button>
+            <button onClick = {this.handleMinus} className = 'itemPlusMinus' id = 'plusMinus'> - / + </button>
           </div>
         </div>
     )

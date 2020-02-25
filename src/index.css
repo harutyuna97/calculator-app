@@ -51,6 +51,7 @@ code {
   "item4 item5 item6 itemMinus"
   "item7 item8 item9 itemEqual"
   "itemC item0 itemDot itemEqual"
+  "itemPlusMinus itemPlusMinus itemPlusMinus itemPlusMinus "
 ;
 
 }
@@ -141,4 +142,12 @@ code {
   grid-area: itemDot;
   background-color: #ffffff;
   font-weight: bold;
+}
+
+.itemPlusMinus {
+  grid-area: itemPlusMinus;
+  background-color: #ffffff;
+  padding: 10px 0;
+  font-weight: bold;
+  font-size: 20px;
 }
