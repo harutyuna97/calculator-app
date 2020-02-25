@@ -89,10 +89,11 @@ class App extends Component{
   };
 
   render() {
+    let inputValue = this.state.inputValue.slice(0, 20);
     return (
         <div className='mainDiv'>
           <div>
-            <input value={this.state.inputValue} readOnly className = 'calc-input'/>
+            <input value={inputValue} readOnly className = 'calc-input'/>
           </div>
           <div className='calc-main'>
             <button onClick = {this.handleOperator} className = 'itemX' id = 'times'> X </button>
